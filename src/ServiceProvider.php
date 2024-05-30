@@ -10,6 +10,8 @@ class ServiceProvider extends AddonServiceProvider
 {
     public function bootAddon()
     {
+        $this->mergeConfigFrom(__DIR__.'/../config/statamic/nerf.php', 'statamic.nerf');
+
         $this->publishes([
             __DIR__.'/../config/statamic/nerf.php' => config_path('statamic/nerf.php'),
         ], 'nerf-config');
