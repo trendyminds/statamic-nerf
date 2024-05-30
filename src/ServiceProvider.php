@@ -15,7 +15,7 @@ class ServiceProvider extends AddonServiceProvider
         ], 'nerf-config');
 
         // Exit out if the add-on is disabled
-        if (! config('nerf.enabled')) {
+        if (! config('statamic.nerf.enabled')) {
             return;
         }
 
