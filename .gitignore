@@ -1,0 +1,6 @@
+node_modules
+vendor
+mix-manifest.json
+tests/__fixtures__/
+.phpunit.cache
+.phpunit.result.cache

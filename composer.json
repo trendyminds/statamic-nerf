@@ -1,0 +1,44 @@
+{
+    "name": "trendyminds/nerf",
+    "description": "Allows certain admin-only permissions to be reduced in production environments",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-4": {
+            "Trendyminds\\Nerf\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Trendyminds\\Nerf\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": "^8.2",
+        "statamic/cms": "^5.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "pestphp/pest": "^2.34",
+        "laravel/pint": "^1.16"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true,
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Nerf",
+            "description": "Nerf addon"
+        },
+        "laravel": {
+            "providers": [
+                "Trendyminds\\Nerf\\ServiceProvider"
+            ]
+        }
+    }
+}
