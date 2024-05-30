@@ -30,4 +30,4 @@ jobs:
 
     - name: Run Test suite
       run: |
-        pest
+        ./vendor/bin/pest
