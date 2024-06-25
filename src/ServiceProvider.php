@@ -3,8 +3,10 @@
 namespace Trendyminds\Nerf;
 
 use Statamic\Auth\File\User;
+use Statamic\Policies\UserPolicy;
 use Statamic\Providers\AddonServiceProvider;
 use Trendyminds\Nerf\Auth\NerfUser;
+use Trendyminds\Nerf\Policy\NerfUserPolicy;
 
 class ServiceProvider extends AddonServiceProvider
 {
@@ -24,5 +26,8 @@ class ServiceProvider extends AddonServiceProvider
         // If we don't allow admin changes, we need to replace the User class
         // with our own and remove the permissions we don't want to allow
         $this->app->bind(User::class, NerfUser::class);
+
+        // We need to also bind a new policy disallowing super admins from being edited
+        $this->app->bind(UserPolicy::class, NerfUserPolicy::class);
     }
 }
