@@ -13,7 +13,8 @@ class NerfUserPolicy extends UserPolicy
         $authed = User::fromUser($authed);
 
         // Disallow the authorized user from editing a super account
-        if (! $authed->isSuper() && $user->isSuper()) {
+        // We use ->super instead of ->isSuper() because the User model is swapped out
+        if (! $authed->super && $user->super) {
             return false;
         }
 
@@ -26,7 +27,8 @@ class NerfUserPolicy extends UserPolicy
         $authed = User::fromUser($authed);
 
         // Disallow the authorized user from resetting a super account
-        if (! $authed->isSuper() && $user->isSuper()) {
+        // We use ->super instead of ->isSuper() because the User model is swapped out
+        if (! $authed->super && $user->super) {
             return false;
         }
 
