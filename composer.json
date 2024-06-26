@@ -1,7 +1,7 @@
 {
     "name": "trendyminds/nerf",
     "description": "Allows certain admin-only permissions to be reduced in production environments",
-    "version": "1.0.2",
+    "version": "1.2.0",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -15,12 +15,14 @@
     },
     "require": {
         "php": "^8.2",
+        "spatie/laravel-ray": "^1.36",
         "statamic/cms": "^5.0"
     },
     "require-dev": {
+        "laravel/pint": "^1.16",
         "orchestra/testbench": "^9.0",
         "pestphp/pest": "^2.34",
-        "laravel/pint": "^1.16"
+        "pestphp/pest-plugin-laravel": "^2.4"
     },
     "config": {
         "optimize-autoloader": true,
