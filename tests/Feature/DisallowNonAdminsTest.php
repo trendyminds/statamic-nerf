@@ -7,7 +7,7 @@ use Statamic\Facades\Role;
 use Statamic\Facades\User;
 use Trendyminds\Nerf\Policy\NerfUserPolicy;
 
-use function Pest\Laravel\{actingAs};
+use function Pest\Laravel\actingAs;
 
 test('A non super admin cannot edit a super admins account', function () {
     // Bind the NerfUserPolicy class to the Statamic UserPolicy class (what the Nerf add-on would do if enabled via config/env)
